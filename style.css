@@ -1,0 +1,156 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Noto+Serif:ital@0;1&family=Open+Sans:wght@300&display=swap');
+
+:root{
+    --color-Grayish-Blue:hsl(218, 22%, 67%);
+    --color-light-gary:hsl(204, 43%, 93%);
+    --color-cyan:hsl(179, 62%, 43%);
+    --color-bright-yellow:hsl(71, 73%, 54%);
+    --font-family-1: 'Karla', sans-serif;
+    --font-family-2: 'Noto Serif', serif;
+    --font-family-3: 'Open Sans', sans-serif;
+}
+
+body{
+    background-color: var(--color-light-gary);
+}
+.container{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    max-width: 750px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container .first-box {
+    background: #fff;
+    padding: 15px 40px;
+}
+.container .first-box h2{
+    color: var(--color-cyan);
+    font-family: var(--font-family-1);
+    font-weight: 700;
+}
+.container .first-box h3 {
+    color: var(--color-bright-yellow);
+    font-size: 20px;
+    font-family: var(--font-family-1);
+    font-weight: 700;
+}
+
+.container .first-box p{
+    color: rgba(162, 157, 157, 0.763);
+    font-size: 18px;
+    line-height: 2em;
+    font-family: var(--font-family-1);
+    font-weight: 400;
+}
+
+/* Start CSS second box */
+.container .second-box.row{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create a grid with 2 equal columns */
+    grid-gap: 0px;
+
+}
+/*  */
+
+/*  */
+.container .second-box .box-one{
+    flex: 45%;
+    padding: 30px 0;
+    background-color: var(--color-cyan);
+}
+.container .second-box .box-one h4{
+    margin: 15px 40px;
+    color: #fff;
+    font-size: 20px;
+    font-family: var(--font-family-1);
+    font-weight: 700;
+}
+.container .second-box .box-one .price{
+    display: flex;
+}
+.container .second-box .box-one .price span{
+    color: #fff;
+    font-size: 40px;
+    margin: 0 40px;
+    font-weight: 600;
+}
+.container .second-box .box-one .price p{
+    color: rgba(255, 255, 255, 0.5);
+    position: relative;
+    left: -59px;
+    top: 5px;
+    font-size: 16px;
+}
+.container .second-box .box-one p{
+    color: #fff;
+    margin: 10px 40px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.container .second-box .box-one button{
+    width: 70%;
+    padding: 10px 20px ;
+    margin: 20px 40px;
+    font-size: 20px;
+    color: #fff;
+    background-color: var(--color-bright-yellow);
+    border: none;
+    outline:none !important;
+    cursor: pointer;
+    transition:.8s ease all;
+
+}
+
+/*  */
+.container .second-box .box-two{
+    flex: 40%;
+    padding: 30px 30px;
+    background-color: hsl(179, 62%, 47%);
+    color: #fff;
+    position: relative;
+}
+.container .second-box .box-two h4{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.container .second-box .box-two .list {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    margin-left: -8px;
+    margin-top: -5px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4rem;
+}
+
+
+@media only screen and (max-width: 448px){
+    body{
+        /* display: block; */
+    }
+    .container{
+        max-width: 340px;
+        margin: 40px auto;
+    }
+    .container .first-box h2{
+        font-size: 18px;
+    }
+    .container .first-box h3{
+        font-size: 16px;
+    }
+    .container .first-box p{
+        font-size: 14px;
+    }
+
+    .container .second-box.row{
+        grid-template-columns: repeat(1, 1fr); /* Create a grid with 2 equal columns */
+    }
+    .container .second-box .box-two {
+        height: 200px;
+    }
+}
